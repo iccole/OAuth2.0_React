@@ -22,10 +22,10 @@ class SubmitForm extends React.Component {
 	handleInputChange (e) {
 		let name = e.currentTarget.name;
 		this.setState({[name]: e.currentTarget.value});
-		if(this.state.clientID && this.state.clientSecret && this.state.authorizationURL) {
-			this.setState({isDisabled : false});
+		if(!e.currentTarget.value) {
+			this.setState({isDisabled : true});
 		} else {
-			console.log("yo");
+			this.setState({isDisabled : false});
 		}
 	}
 

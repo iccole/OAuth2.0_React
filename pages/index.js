@@ -43,7 +43,7 @@ class SubmitForm extends React.Component {
 		//Pass login provider in state since we're going to do the token request on the 'server'
 		const state = {idp: 'ms'};
 		return (
-			<div className='submit-form'>
+			<div className='content-page'>
 				<div className='form-inputs'>
 					<label htmlFor="clientID"> Client ID </label>
 					<input name="clientID" value={this.state.clientID} onChange={this.handleInputChange}/>
